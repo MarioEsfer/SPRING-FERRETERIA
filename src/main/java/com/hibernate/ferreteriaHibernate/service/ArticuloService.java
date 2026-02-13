@@ -21,7 +21,7 @@ public class ArticuloService {
         return (List<Articulos>) repositorio.findAll();
     }
 
-    public List<ArticulosDTO> serv_Consultar(){
+    public List<ArticulosDTO> serv_Listar(){
         return repositorio.findAll().stream().map(ArticuloMapper::toDTO).collect(Collectors.toList());
     }
 
