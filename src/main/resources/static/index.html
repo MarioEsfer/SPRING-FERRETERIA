@@ -102,7 +102,7 @@
          <input type="number" id="updId" placeholder="ID del producto"><br>
          <input type="text" id="updNombre" placeholder="Nuevo nombre"><br>
          <input type="number" id="updPrecio" placeholder="Nuevo precio"><br>
-         <input type="number" id="updExistencia" placeholder="Nueva existencia"><br>
+         <input type="number" id="updStock" placeholder="Nueva Stock"><br>
          <button class="btn-green" onclick="actualizarProducto()">Actualizar</button>
      `);
  }
@@ -111,9 +111,9 @@
  function actualizarProducto() {
      const id = $("#updId").val();
      const dto = {
-         nombrearticulo: $("#updNombre").val(),
+         nombre: $("#updNombre").val(),
          precio: $("#updPrecio").val(),
-         existencia: $("#updExistencia").val()
+         stock: $("#updStock").val()
      };
      $.ajax({
          url: BASE_URL + "/" + id,
@@ -155,7 +155,7 @@
          <h4>Insertar Nuevo Producto</h4>
          <input type="text" id="insNombre" placeholder="Nombre del producto"><br>
          <input type="number" id="insPrecio" placeholder="Precio"><br>
-         <input type="number" id="insExistencia" placeholder="Existencia"><br>
+         <input type="number" id="insStock" placeholder="Stock"><br>
          <button class="btn-orange" onclick="insertarProducto()">Guardar</button>
      `);
  }
@@ -163,7 +163,7 @@
  // INSERTAR PRODUCTO
  function insertarProducto() {
      const dto = {
-         nombrearticulo: $("#insNombre").val(),
+         nombre: $("#insNombre").val(),
          precio: $("#insPrecio").val(),
          stock: $("#insStock").val()
      };

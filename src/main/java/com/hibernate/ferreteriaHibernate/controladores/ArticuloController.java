@@ -16,13 +16,13 @@ public class ArticuloController {
     @Autowired
     private ArticuloService service;
 
-    @GetMapping("/listar")
+    /*@GetMapping("/listar")
     public List<Articulos> consultarArticulos(){
         return service.consultaArticulos();
-    }
+    }*/
 
-    @GetMapping()
-    public  List<ArticulosDTO> listar(){
+    @GetMapping
+    public  List<ArticulosDTO> listar() {
         return service.serv_Listar();
     }
 
